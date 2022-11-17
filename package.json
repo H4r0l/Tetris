@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/H4r0l/Tetris/issues"
   },
-  "homepage": "https://github.com/H4r0l/Tetris#readme"
+  "homepage": "https://github.com/H4r0l/Tetris#readme",
+  "dependencies": {
+    "jest": "^29.3.1",
+    "package.json": "^0.0.0"
+  }
 }
