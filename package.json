@@ -1,0 +1,19 @@
+{
+  "name": "proyecto-tetris",
+  "version": "1.0.0",
+  "description": "Tetris creado con Canva, Por Harol y Michell",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/H4r0l/Tetris.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/H4r0l/Tetris/issues"
+  },
+  "homepage": "https://github.com/H4r0l/Tetris#readme"
+}
