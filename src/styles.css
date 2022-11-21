@@ -4,7 +4,7 @@
     font-family: 'Press Start 2P', cursive;
     font-size: 2rem;
     font-weight: 400;
-    margin: 0;
+    margin: 1rem;
 }
 .container h1:hover{
     transform: scale(1.5);
@@ -26,6 +26,7 @@
     align-items: center;
 }
 .button{
+    margin: 2rem;
     width: 4rem;
     height: 4rem;
     border-top: 0;
