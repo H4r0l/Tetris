@@ -1,15 +1,15 @@
-let velocidad=50000; //velocidad del juego
-let fpi, cpi, rot; //fila, columna y rotación de la ficha
-let tablero;  //matriz con el tablero
-let pieza=0; //pieza
+let velocidad = 50000;
+let fpi, cpi, rot;
+let tablero;
+let pieza = 0;
 
 let keyRight = document.getElementById('button-right');
 let keyLeft = document.getElementById('button-left');
 let keyDown = document.getElementById('button-down');
 let keyRotate = document.getElementById('button-rotate')
 
-let record=0;  //almacena la mejor puntuación
-let lineas=0;   //almacena la  puntuación actual
+let record = 0;
+let lineas = 0;  
 let pos=[  //Valores referencia de coordenadas relativas
               [0,0],
               [0,1],
@@ -29,7 +29,20 @@ let pos=[  //Valores referencia de coordenadas relativas
               [2,0,3,5,4],
               [1,0,5,6,3]
     ];
-    //Genera una nueva partida inicializando las variables
+
+    keyRight.onclick = function(){
+        moverPieza(1);
+    }
+    keyLeft.onclick = function(){
+        moverPieza(-1);
+    }
+    keyDown.onclick = function(){
+        bajarPieza();
+    }
+    keyRotate.onclick = function(){
+        rotarPieza();
+    }
+
     function nuevaPartida(){
                 velocidad = 50000;
                 tablero=new Array(20);
@@ -42,12 +55,19 @@ let pos=[  //Valores referencia de coordenadas relativas
         lineas=0;
         nuevaPieza();
     }
-    //Detecta si una fila columna del tablero está libre para ser ocupada
+    function nuevaPieza(){
+        cpi=3;
+        fpi=0;
+        rot=0;
+        pieza=Math.floor(Math.random()*7);
+        }
+   
+    
         function cuadroNoDisponible(f,c){
         if (f < 0) return false;
         return (c < 0 || c >= 9 || f >= 20 || tablero[f][c] > 0);
     }
-    //Detecta si la pieza activa colisiona fuera del tablero o con otra pieza
+    
         function colisionaPieza(){
         for (v=1;v < 5;v++){
             des=piezas[pieza][v];
@@ -56,9 +76,10 @@ let pos=[  //Valores referencia de coordenadas relativas
                 return true;
             }
         }
+
+
         return false;
         }
-    //Detecta si hay lineas completas y si las hay las computa y borra la linea desplazando la submatriz superior
         function detectarLineas(){
         for (f=0;f < 20;f++){
             contarCuadros=0;
@@ -77,7 +98,7 @@ let pos=[  //Valores referencia de coordenadas relativas
             }
         }
     }
-    //Baja la pieza, si toca otra pieza o el suelo, saca una nueva pieza
+    
         function bajarPieza(){
         fpi=fpi+1;
         if (colisionaPieza()){
@@ -115,7 +136,7 @@ let pos=[  //Valores referencia de coordenadas relativas
             cpi=cpi-des;
         }
     }
-    //Rota la pieza según el número de rotaciones posibles tenga la pieza activa. (posición 0 de la pieza)
+
     function rotarPieza(){
                 rot=rot+1;
                 if (rot==piezas[pieza] [ 0 ] ){
@@ -140,25 +161,14 @@ let pos=[  //Valores referencia de coordenadas relativas
         return pos2;
     }
     //Genera una nueva pieza aleatoriamente
-    function nuevaPieza(){
-        cpi=3;
-        fpi=0;
-        rot=0;
-        pieza=Math.floor(Math.random()*7);
-        }
-    //Ejecución principal del juego, realiza la animación y repinta
-        function tick(){
-        bajarPieza();
-        pintar();
-        setTimeout('tick()', velocidad/100);
-        }
+
     //Pinta el tablero (lo genera con html) y lo plasma en un div.
     function pintar(){
         let lt=" <";
         let des;
         let html="<table class='tetris'>"
         for (f=0;f < 20;f++){
-            html+="<tr>";
+            html+="<tr>";f
             for (c=0;c < 9;c++){
                 let color=tablero[f][c];
                 if (color==0){
@@ -180,8 +190,13 @@ let pos=[  //Valores referencia de coordenadas relativas
         document.getElementById('tetris').innerHTML=html;
                 velocidad=Math.max(velocidad-1,500);
     }
-    //Al iniciar la pagina inicia el juego
-    function eventoCargar(){
+    function tick(){
+        bajarPieza();
+        pintar();
+        setTimeout('tick()', velocidad/100);
+        }
+    //Funcion principal
+    function start(){
             nuevaPartida();
             setTimeout('tick()', 1);
         }
@@ -203,16 +218,4 @@ let pos=[  //Valores referencia de coordenadas relativas
             break;
                 }
         pintar();
-        }
-        keyRight.onclick = function(){
-            moverPieza(1);
-        }
-        keyLeft.onclick = function(){
-            moverPieza(-1);
-        }
-        keyDown.onclick = function(){
-            bajarPieza();
-        }
-        keyRotate.onclick = function(){
-            rotarPieza();
         }

@@ -52,6 +52,7 @@ h1 {
 }
 .tetris{
     border-collapse: collapse;
+    border: 2px solid black;
 }
 table .tetris{
     font-family: 'Press Start 2P', cursive;
@@ -82,7 +83,6 @@ table .tetris{
 }
 .celda2{
     background-color: #FF0000;
-    border: 2px solid black;
     border-radius: 7px;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
@@ -91,7 +91,6 @@ table .tetris{
 }
 .celda3{
     background-color: #AEE6F2;
-    border: 2px solid black;
     border-radius: 7px;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
@@ -100,7 +99,6 @@ table .tetris{
 }
 .celda4{
     background-color: #FFFF00;
-    border: 2px solid black;
     border-radius: 7px;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
@@ -109,7 +107,6 @@ table .tetris{
 }
 .celda5{
     background-color: #73062E;
-    border: 2px solid black;
     border-radius: 7px;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
@@ -118,7 +115,6 @@ table .tetris{
 }
 .celda6{
     background-color: #0B4359;
-    border: 2px solid black;
     border-radius: 7px;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
@@ -127,7 +123,6 @@ table .tetris{
 }
 .celda7{
     background-color: #888888;
-    border: 2px solid black;
     border-radius: 7px;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
