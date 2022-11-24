@@ -4,6 +4,7 @@ function start(){
 	const context = panel.getContext("2d");
 
     context.scale(20,20);
+    canvas.width(500)
 
 }
 
