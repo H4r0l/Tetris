@@ -74,7 +74,6 @@ table .tetris{
 }
 .celda1{
     background-color: #13F273;
-    border: 2px solid black;
     border-radius: 7px;
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
