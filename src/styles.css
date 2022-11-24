@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
-.container h1 {
+html{
+    overflow: hidden;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+}
+h1 {
     font-family: 'Press Start 2P', cursive;
     font-size: 2rem;
     font-weight: 400;
@@ -8,7 +12,7 @@
 }
 .container h1:hover{
     transform: scale(1.5);
-    text-shadow: 5px 5px gray;
+    text-shadow: 7px 7px gray;
     -webkit-transform: scale(1.5);
     -moz-transform: scale(1.5);
     -ms-transform: scale(1.5);
@@ -25,14 +29,15 @@
     justify-content: flex-start;
     align-items: center;
 }
+
 .button{
-    margin: 2rem;
-    width: 4rem;
-    height: 4rem;
+    margin: 1rem;
+    width: 3rem;
+    height: 3rem;
     border-top: 0;
-    font-size: 3.6rem;
-    border-right: 5px;
-    border-width: 5px;
+    font-size: 2.6rem;
+    border-right: 7px;
+    border-width: 7px;
     border-color: #72ACC2;
     background-color: #29738F;
     border-radius: 100%;
@@ -40,4 +45,87 @@
     -moz-border-radius: 100%;
     -ms-border-radius: 100%;
     -o-border-radius: 100%;
+}
+.controller{
+    display: flex;
+    
+}
+.tetris{
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+table .tetris{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+}
+.tetris tr td{
+    width:20px;
+    height:20px;
+    padding: 0px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+.celda0{
+    background-color: #02A1E0;
+    border: 2px solid white;
+}
+.celda1{
+    background-color: #13F273;
+    border: 2px solid black;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.celda2{
+    background-color: #FF0000;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.celda3{
+    background-color: #AEE6F2;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.celda4{
+    background-color: #FFFF00;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.celda5{
+    background-color: #73062E;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.celda6{
+    background-color: #0B4359;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+.celda7{
+    background-color: #888888;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
 }
