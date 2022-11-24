@@ -15,14 +15,14 @@
 ## Recursos
 + La documentación será creada a lo largo del desarrollo y entregada al final del proyecto
 
-##Como clonar el repositorio 
-+Abra Git Bash.
+## Como clonar el repositorio 
++ Abra Git Bash.
 
-+Cambia el directorio de trabajo actual a la ubicación en donde quieres clonar el directorio.
++ Cambia el directorio de trabajo actual a la ubicación en donde quieres clonar el directorio.
 
-+Escriba git clone y pegue la dirección URL que ha copiado antes.
++ Escriba git clone y pegue la dirección URL que ha copiado antes.
 
-+$ git clone https://github.com/H4r0l/Tetris.git
++ $ git clone https://github.com/H4r0l/Tetris.git
 
 ## Creado por:
 | Developer |  Developer |
